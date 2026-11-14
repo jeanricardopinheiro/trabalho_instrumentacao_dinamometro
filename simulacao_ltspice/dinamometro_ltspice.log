@@ -1,0 +1,20 @@
+LTspice 26.0.2 for Windows
+Circuit: C:\Users\jeanr\Desktop\engenharia\instrumentacao\trabalho_dinamometro\codigo_dinamometro\simulacao_ltspice\dinamometro_ltspice.net
+Start Time: Sat Nov 14 13:24:13 2026
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = trap
+Early termination of direct N-R iteration.
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Total elapsed time: 0.129 seconds.
+
+Files loaded:
+C:\Users\jeanr\Desktop\engenharia\instrumentacao\trabalho_dinamometro\codigo_dinamometro\simulacao_ltspice\dinamometro_ltspice.net
+C:\Users\jeanr\Desktop\engenharia\instrumentacao\trabalho_dinamometro\codigo_dinamometro\simulacao_ltspice\INA114.LIB
+C:\Users\jeanr\Desktop\engenharia\instrumentacao\trabalho_dinamometro\codigo_dinamometro\simulacao_ltspice\zener.lib
+
