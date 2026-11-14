@@ -1,0 +1,18 @@
+Version 4
+SymbolType BLOCK
+LINE Normal 16 -16 -16 -16
+LINE Normal 0 16 16 -16
+LINE Normal -16 -16 0 16
+LINE Normal 0 32 0 16
+LINE Normal 0 -32 0 -16
+LINE Normal 16 16 -16 16
+LINE Normal -19 11 -16 16
+LINE Normal 20 21 16 16
+TEXT 20 -4 Left 2 1N4733A
+SYMATTR Prefix X
+SYMATTR Value DI_1N4733A
+SYMATTR Description 1N4733A Zener 5.1V 1W
+PIN 0 -32 NONE 8
+PINATTR SpiceOrder 1
+PIN 0 32 NONE 8
+PINATTR SpiceOrder 2
