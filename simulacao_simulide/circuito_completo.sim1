@@ -8,35 +8,55 @@
 
 <item itemtype="Potentiometer" CircId="Potentiometer-7" mainComp="false" ShowProp="Value_Ohm" Show_id="true" Show_Val="true" Pos="-816,-100" rotation="-90" hflip="1" vflip="1" label="Rb" idLabPos="-16,-40" labelrot="0" valLabPos="0.576731,-29.0661" valLabRot="0" Resistance="10 kΩ" Value_Ohm="5290 Ω" Slider="true" Scale="1" />
 
-<item itemtype="VarResistor" CircId="VarResistor-8" mainComp="false" ShowProp="Value_Ohm" Show_id="true" Show_Val="true" Pos="-660,-152" rotation="-90" hflip="1" vflip="1" label="R1" idLabPos="-9.17654,-23.3501" labelrot="0" valLabPos="-17.9496,14.0786" valLabRot="0" Min_Resistance="119.88 Ω" Max_Resistance="120.12 Ω" Value_Ohm="120.12 Ω" Dial_Step="1 mΩ" Slider="true" Scale="1" />
+<item itemtype="VarResistor" CircId="VarResistor-8" mainComp="false" ShowProp="Value_Ohm" Show_id="true" Show_Val="true" Pos="-660,-152" rotation="-90" hflip="1" vflip="1" label="R1" idLabPos="-9.17654,-23.3501" labelrot="0" valLabPos="-30.4917,15.2731" valLabRot="0" Min_Resistance="119.88 Ω" Max_Resistance="120.12 Ω" Value_Ohm="120.029 Ω" Dial_Step="1 mΩ" Slider="true" Scale="1" />
 
-<item itemtype="VarResistor" CircId="VarResistor-9" mainComp="false" ShowProp="Value_Ohm" Show_id="true" Show_Val="true" Pos="-660,-52" rotation="-270" hflip="1" vflip="1" label="R4" idLabPos="-3.00293,-23.3501" labelrot="0" valLabPos="-12.7507,17.6528" valLabRot="0" Min_Resistance="119.88 Ω" Max_Resistance="120.12 Ω" Value_Ohm="119.88 Ω" Dial_Step="1 mΩ" Slider="true" Scale="1" />
+<item itemtype="VarResistor" CircId="VarResistor-9" mainComp="false" ShowProp="Value_Ohm" Show_id="true" Show_Val="true" Pos="-660,-52" rotation="-270" hflip="1" vflip="1" label="R4" idLabPos="-3.00293,-23.3501" labelrot="0" valLabPos="-12.7507,17.6528" valLabRot="0" Min_Resistance="119.88 Ω" Max_Resistance="120.12 Ω" Value_Ohm="119.994 Ω" Dial_Step="1 mΩ" Slider="true" Scale="1" />
 
 <item itemtype="opAmp" CircId="opAmp-10" mainComp="false" ShowProp="Gain" Show_id="true" Show_Val="true" Pos="-552,-100" rotation="0" hflip="1" vflip="1" label="INA114" idLabPos="15.5179,-22.9021" labelrot="0" valLabPos="-34.0995,-37.0829" valLabRot="0" Gain="1255" Out_Imped="1e-09 Ω" Power_Pins="true" Switch_Pins="false" Volt_Pos="8 V" Volt_Neg="8 V" />
 
-<item itemtype="Zener" CircId="Zener-11" mainComp="false" Show_id="true" Show_Val="false" Pos="-436,-68" rotation="-90" hflip="1" vflip="1" label="1N4733A" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Model="Custom" Threshold="0.699709 V" MaxCurrent="178 mA" Resistance="7 Ω" BrkDownV="5.1 V" SatCurrent="1 nA" EmCoef="1.575" />
-
-<item itemtype="Resistor" CircId="Resistor-12" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-480,-100" rotation="0" hflip="1" vflip="1" label="Rzen" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="150 Ω" />
-
 <item itemtype="Ground" CircId="Ground-13" mainComp="false" Show_id="false" Show_Val="false" Pos="-748,16" rotation="0" hflip="1" vflip="1" label="Ground-13" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
 
-<item itemtype="Ground" CircId="Ground-14" mainComp="false" Show_id="false" Show_Val="false" Pos="-436,-16" rotation="0" hflip="1" vflip="1" label="Ground-14" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+<item itemtype="Ground" CircId="Ground-14" mainComp="false" Show_id="false" Show_Val="false" Pos="-436,-4" rotation="0" hflip="1" vflip="1" label="Ground-14" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
 
-<item itemtype="Fixed Voltage" CircId="Fixed Voltage-15" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-868,-164" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-15" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="8 V" Out="true" />
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-15" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-880,-188" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-15" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="8 V" Out="true" />
 
 <item itemtype="Fixed Voltage" CircId="Fixed Voltage-16" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-576,-8" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-16" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="-8 V" Out="true" />
 
 <item itemtype="Probe" CircId="Probe-53" mainComp="false" Show_id="false" Show_Val="true" Pos="-604,-76" rotation="-225" hflip="1" vflip="1" label="Probe-53" idLabPos="16,-16" labelrot="225" valLabPos="16,0" valLabRot="225" ShowVolt="true" Threshold="2.5 mV" />
 
-<item itemtype="Probe" CircId="Probe-54" mainComp="false" Show_id="false" Show_Val="true" Pos="-436,-116" rotation="-45" hflip="1" vflip="1" label="Probe-54" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+<item itemtype="Probe" CircId="Probe-54" mainComp="false" Show_id="false" Show_Val="true" Pos="-400,-116" rotation="-45" hflip="1" vflip="1" label="Probe-54" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
 
 <item itemtype="Probe" CircId="Probe-55" mainComp="false" Show_id="false" Show_Val="true" Pos="-612,-124" rotation="-45" hflip="1" vflip="1" label="Probe-55" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
 
-<item itemtype="Subcircuit" CircId="Uno-56" mainComp="false" Show_id="true" Show_Val="false" Pos="-368,-76" rotation="-360" hflip="1" vflip="1" label="Uno-56" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
-<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+<item itemtype="Ground" CircId="Ground-59" mainComp="false" Show_id="false" Show_Val="false" Pos="-184,52" rotation="0" hflip="1" vflip="1" label="Ground-59" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Oscope" CircId="Oscope-64" mainComp="false" Show_id="false" Show_Val="false" Pos="-508,152" rotation="0" hflip="1" vflip="1" label="Oscope-64" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _px" Basic_Y="135 _px" BufferSize="600000" connectGnd="true" InputImped="10 MΩ" TimDiv="1000000000" TimPos="-2304275918,-2304275918,-2304275918,-2304275918," VolDiv="2,1,1,1," Tunnels=",,,," Trigger="4" Filter="0 V" AutoSC="4" Tracks="2" HideCh="false,false,false,false," VolPos="0,0,0,0," />
+
+<item itemtype="Tunnel" CircId="Tunnel-74" mainComp="false" Show_id="false" Show_Val="false" Pos="-484,4" rotation="0" hflip="1" vflip="1" label="Tunnel-74" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="1" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-75" mainComp="false" Show_id="false" Show_Val="false" Pos="-292,-140" rotation="0" hflip="1" vflip="1" label="Tunnel-75" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="2" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-76" mainComp="false" Show_id="false" Show_Val="false" Pos="-416,44" rotation="0" hflip="1" vflip="1" label="Tunnel-76" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="3" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-78" mainComp="false" Show_id="false" Show_Val="false" Pos="-476,-36" rotation="0" hflip="1" vflip="1" label="Tunnel-78" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="1" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-79" mainComp="false" Show_id="false" Show_Val="false" Pos="-632,104" rotation="0" hflip="1" vflip="1" label="Tunnel-79" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="2" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-80" mainComp="false" Show_id="false" Show_Val="false" Pos="-628,200" rotation="0" hflip="1" vflip="1" label="Tunnel-80" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="3" IsBus="false" />
+
+<item itemtype="WaveGen" CircId="WaveGen-85" mainComp="false" ShowProp="Semi_Ampli" Show_id="false" Show_Val="true" Pos="-496,44" rotation="0" hflip="1" vflip="1" label="WaveGen-85" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Out="true" Running="true" Wave_Type="Sine" Freq="60 Hz" Phase="0 _º" Steps="100 _Steps" Duty="50 _%" Always_On="false" Bipolar="false" Floating="false" Semi_Ampli="0.068 V" Mid_Volt="0 V" />
+
+<item itemtype="Zener" CircId="Zener-89" mainComp="false" Show_id="true" Show_Val="false" Pos="-436,-68" rotation="-90" hflip="1" vflip="1" label="Zener-89" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Model="Custom" Threshold="0.699709 V" MaxCurrent="178 mA" Resistance="7 Ω" BrkDownV="5.1 V" SatCurrent="1 nA" EmCoef="1.575" />
+
+<item itemtype="Resistor" CircId="Resistor-90" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-484,-100" rotation="0" hflip="1" vflip="1" label="Resistor-90" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="150 Ω" />
+
+<item itemtype="Subcircuit" CircId="Uno-91" mainComp="false" Show_id="true" Show_Val="false" Pos="-360,-84" rotation="-360" hflip="1" vflip="1" label="Uno-91" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../codigo/dinamometro/build/arduino.avr.uno/dinamometro.ino.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
 </item>
 
-<item itemtype="Ground" CircId="Ground-59" mainComp="false" Show_id="false" Show_Val="false" Pos="-184,52" rotation="0" hflip="1" vflip="1" label="Ground-59" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+<item itemtype="TextComponent" CircId="TextComponent-97" mainComp="false" Show_id="false" Show_Val="false" Pos="-528,-236" rotation="0" hflip="1" vflip="1" label="TextComponent-97" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="false" Text="TESTE DE RUIDO&#xa;Estou utilizando um gerador de função para uma onda senoidal de 60Hz &#xa;com amplitude 0,068V e inserindo no GND para simular ruido e ver como &#xa;o filtro se comporta.&#xa;" />
+
+<item itemtype="TextComponent" CircId="TextComponent-99" mainComp="false" Show_id="false" Show_Val="false" Pos="-876,52" rotation="0" hflip="1" vflip="1" label="TextComponent-99" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="false" Text="TUNNEL&#xa;&#xa;Tunnel 1 -&#x3E ruido&#xa;Tunnel2-&#x3E sinal DC + ruido&#xa;Tunnel 3 -&#x3E saida PWD no PD2 &#xa;para ver se a freq de amostragem está correta&#xa;" />
 
 <item itemtype="Node" CircId="Node-24" mainComp="false" Pos="-684,-180" />
 
@@ -54,7 +74,11 @@
 
 <item itemtype="Node" CircId="Node-47" mainComp="false" Pos="-660,-92" />
 
-<item itemtype="Node" CircId="Node-58" mainComp="false" Pos="-436,-100" />
+<item itemtype="Node" CircId="Node-92" mainComp="false" Pos="-436,-100" />
+
+<item itemtype="Node" CircId="Node-94" mainComp="false" Pos="-256,-100" />
+
+<item itemtype="Node" CircId="Node-96" mainComp="false" Pos="-436,-36" />
 
 <item itemtype="Connector" uid="Connector-31" startpinid="Resistor-4-lPin" endpinid="Node-24-0" pointList="-716,-164,-716,-180,-684,-180" />
 
@@ -68,21 +92,13 @@
 
 <item itemtype="Connector" uid="Connector-37" startpinid="Potentiometer-7-PinA" endpinid="Node-26-0" pointList="-816,-84,-816,-8,-748,-8" />
 
-<item itemtype="Connector" uid="Connector-39" startpinid="Node-27-1" endpinid="opAmp-10-powerPos" pointList="-684,-196,-552,-196,-552,-116" />
-
 <item itemtype="Connector" uid="Connector-41" startpinid="Node-27-2" endpinid="Node-24-1" pointList="-684,-196,-684,-180" />
 
 <item itemtype="Connector" uid="Connector-42" startpinid="opAmp-10-powerNeg" endpinid="Fixed Voltage-16-outnod" pointList="-552,-84,-552,-8,-560,-8" />
 
-<item itemtype="Connector" uid="Connector-43" startpinid="opAmp-10-output" endpinid="Resistor-12-lPin" pointList="-528,-100,-496,-100" />
-
-<item itemtype="Connector" uid="Connector-45" startpinid="Zener-11-lPin" endpinid="Ground-14-Gnd" pointList="-436,-52,-436,-32" />
-
-<item itemtype="Connector" uid="Connector-46" startpinid="Fixed Voltage-15-outnod" endpinid="Node-28-1" pointList="-852,-164,-816,-164,-816,-188" />
+<item itemtype="Connector" uid="Connector-46" startpinid="Fixed Voltage-15-outnod" endpinid="Node-28-1" pointList="-864,-188,-816,-188" />
 
 <item itemtype="Connector" uid="Connector-47" startpinid="Potentiometer-7-PinB" endpinid="Node-28-0" pointList="-816,-116,-816,-188" />
-
-<item itemtype="Connector" uid="Connector-48" startpinid="Node-28-2" endpinid="Node-27-0" pointList="-816,-188,-816,-196,-684,-196" />
 
 <item itemtype="Connector" uid="Connector-49" startpinid="Potentiometer-7-PinM" endpinid="Resistor-6-lPin" pointList="-800,-100,-788,-100" />
 
@@ -104,12 +120,36 @@
 
 <item itemtype="Connector" uid="Connector-119" startpinid="opAmp-10-inputInv" endpinid="Node-47-1" pointList="-576,-92,-660,-92" />
 
-<item itemtype="Connector" uid="Connector-124" startpinid="Uno-56-A0" endpinid="Node-58-1" pointList="-216,-20,-196,-20,-196,-100,-436,-100" />
+<item itemtype="Connector" uid="Connector-147" startpinid="Node-28-2" endpinid="Node-27-0" pointList="-816,-188,-816,-196,-684,-196" />
 
-<item itemtype="Connector" uid="Connector-125" startpinid="Resistor-12-rPin" endpinid="Node-58-0" pointList="-464,-100,-436,-100" />
+<item itemtype="Connector" uid="Connector-156" startpinid="Node-27-1" endpinid="opAmp-10-powerPos" pointList="-684,-196,-552,-196,-552,-116" />
 
-<item itemtype="Connector" uid="Connector-126" startpinid="Node-58-2" endpinid="Zener-11-rPin" pointList="-436,-100,-436,-84" />
+<item itemtype="Connector" uid="Connector-197" startpinid="opAmp-10-output" endpinid="Resistor-90-lPin" pointList="-528,-100,-500,-100" />
 
-<item itemtype="Connector" uid="Connector-127" startpinid="Uno-56-GND1" endpinid="Ground-59-Gnd" pointList="-216,12,-184,12,-184,36" />
+<item itemtype="Connector" uid="Connector-202" startpinid="Resistor-90-rPin" endpinid="Node-92-0" pointList="-468,-100,-436,-100" />
+
+<item itemtype="Connector" uid="Connector-203" startpinid="Node-92-2" endpinid="Zener-89-rPin" pointList="-436,-100,-436,-84" />
+
+<item itemtype="Connector" uid="Connector-208" startpinid="Tunnel-75-pin" endpinid="Node-94-1" pointList="-292,-140,-256,-140,-256,-100" />
+
+<item itemtype="Connector" uid="Connector-210" startpinid="Node-94-2" endpinid="Uno-91-A0" pointList="-256,-100,-188,-100,-188,-28,-208,-28" />
+
+<item itemtype="Connector" uid="Connector-212" startpinid="Uno-91-GND1" endpinid="Ground-59-Gnd" pointList="-208,4,-184,4,-184,36" />
+
+<item itemtype="Connector" uid="Connector-213" startpinid="WaveGen-85-outnod" endpinid="Tunnel-74-pin" pointList="-480,44,-468,44,-468,4,-484,4" />
+
+<item itemtype="Connector" uid="Connector-214" startpinid="Tunnel-79-pin" endpinid="Oscope-64-Pin0" pointList="-632,104,-596,104" />
+
+<item itemtype="Connector" uid="Connector-215" startpinid="Node-92-1" endpinid="Node-94-0" pointList="-436,-100,-256,-100" />
+
+<item itemtype="Connector" uid="Connector-216" startpinid="Tunnel-78-pin" endpinid="Node-96-1" pointList="-476,-36,-436,-36" />
+
+<item itemtype="Connector" uid="Connector-217" startpinid="Zener-89-lPin" endpinid="Node-96-0" pointList="-436,-52,-436,-36" />
+
+<item itemtype="Connector" uid="Connector-218" startpinid="Node-96-2" endpinid="Ground-14-Gnd" pointList="-436,-36,-436,-20" />
+
+<item itemtype="Connector" uid="Connector-219" startpinid="Tunnel-76-pin" endpinid="Uno-91-13" pointList="-416,44,-352,44" />
+
+<item itemtype="Connector" uid="Connector-220" startpinid="Tunnel-80-pin" endpinid="Oscope-64-Pin3" pointList="-628,200,-596,200" />
 
 </circuit>

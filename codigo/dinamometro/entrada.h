@@ -1,5 +1,5 @@
-#ifndef ENTRADA_ADC_H
-#define ENTRADA_ADC_H
+#ifndef ENTRADA_H
+#define ENTRADA_H
 
 #include <Arduino.h>
 

@@ -1,5 +1,5 @@
-#ifndef SAIDASERIAL_H
-#define SAIDASERIAL_H
+#ifndef SAIDA_H
+#define SAIDA_H
 
 void inicializarSerial();
 

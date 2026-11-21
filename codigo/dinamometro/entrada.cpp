@@ -1,20 +1,20 @@
-#include "entrada_adc.h"
+#include "entrada.h"
 #include "filtro.h"
-#include "saida_serial.h"
+#include "saida.h"
 
 #include <avr/interrupt.h>
 
 
 ISR(ADC_vect){
     // 5.0 Variáveis locais
-    float volts;
+    float contagensADC;
     double out; //y3 para mais uma seção.
 
     // 5.1. Processamento e Filtro, para mais seções inclua aqui também.
     //volts = (ADC / 1023.0) * 5.0;
-    voltsADC = ADC;
+    contagensADC = ADC;
 
-    out = filtrar(voltsADC);
+    out = filtrar(contagensADC);
     enviarDadosFila(out);
 
 
@@ -62,7 +62,8 @@ void inicializarADC() {
     // OCR0A: Define o valor TOP (teto) da contagem (0-255).
     // Fs = Clock_Timer / OCR0A = 250.000 Hz / 250 = 1000 Hz
     // (Consulte "Passo 1" do tutorial para calcular este valor)
-    OCR0A = 250; //################################################Clock_Timer / (OCR0A + 1) o correto seria OCR0A=249
+    //OCR0A = 250; //################################################Clock_Timer / (OCR0A + 1) o correto seria OCR0A=249
+    OCR0A = 249;
     // Desliga a interrupção de overflow do Timer0 que o core usa para millis()
     TIMSK0 = 0;
     // Limpa o flag do timer (boa prática de inicialização)

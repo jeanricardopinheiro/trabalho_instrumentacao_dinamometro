@@ -1,6 +1,6 @@
-#include "entrada_adc.h"
+#include "entrada.h"
 #include "filtro.h"
-#include "saida_serial.h"
+#include "saida.h"
 
 void setup() {
   inicializarFiltro();
