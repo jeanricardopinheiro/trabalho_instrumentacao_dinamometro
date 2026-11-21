@@ -14,9 +14,9 @@ typedef struct {
 } BiQuadC;
 
 
-BiQuadC bq1, bq2;
+BiQuadC bq1; //bq2
 BiQuadC *prtbq1 = &bq1;
-BiQuadC *prtbq2 = &bq2;
+//BiQuadC *prtbq2 = &bq2;
 
 // --- 2. Função de Inicialização do Filtro ---
 void BiQuad_initWithCoefficients(BiQuadC *bq, double b0, double b1, double b2,
@@ -29,9 +29,10 @@ void BiQuad_initWithCoefficients(BiQuadC *bq, double b0, double b1, double b2,
                                 }
 //Função de Inicialização do setup(declarar no .h)
 void inicializarFiltro(){
-    // 6.3. Coeficientes do Filtro (Gerados pelo MATLAB) Ex. abaixo: Passa baixa, Butterworth, Fs = 1000 Hz, frequencia de corte = 10 Hz e frequencia de rejeição = 100 Hz (-40dB)
-    BiQuad_initWithCoefficients(prtbq1, 1.00000000e+00, 2.00000000e+00, 1.00000000e+00, -1.85151441e+00, 8.69750170e-01, 4.558938980367e-03 );
-    BiQuad_initWithCoefficients(prtbq2, 1.00000000e+00, 1.00000000e+00, 0.00000000e+00, -8.69153650e-01, 0.00000000e+00, 6.542317517746e-02 );
+    // 6.3. Coeficientes do Filtro (Gerados pelo MATLAB) Ex. abaixo: Passa baixa, Butterworth, Fs = 1000 Hz, frequencia de corte = 4 Hz e frequencia de rejeição = 40 Hz (-40dB)
+    BiQuad_initWithCoefficients(prtbq1, 1.00000000e+00, 2.00000000e+00, 1.00000000e+00, -1.96427336e+00,9.64900457e-01, 1.567731501764e-04 );
+
+    //===== verifiar se nao vai dar BO com uma freq 2hz
 }
 
 // --- 3. Função de Processamento de Amostra ---
@@ -47,11 +48,11 @@ double BiQuad_signalSample(BiQuadC *bq, double x) {
 
 double filtrar(float volts){
     // 5.0 Variáveis locais
-    double y, y2; //y3 para mais uma seção.
+    double y; //y2 para mais uma seção.
 
     y = BiQuad_signalSample(prtbq1, volts);
-    y2 = BiQuad_signalSample(prtbq2, y);
+    //y2 = BiQuad_signalSample(prtbq2, y);
     // y3 = BiQuad_signalSample(prtbq3, y2);
-    return y2;
+    return y;
 }
 

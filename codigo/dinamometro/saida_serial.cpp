@@ -48,7 +48,7 @@ void enviarDadosSerial(){
         Serial.print("Forca lida: ");
         Serial.print(valorForca, 2);
 
-        Serial.print(" kg | Tensao ADC: ");
+        Serial.print(" kg/f | Tensao ADC: ");
         Serial.print(valorTensao, 2);
 
         Serial.println(" V");
