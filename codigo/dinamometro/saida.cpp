@@ -46,10 +46,10 @@ void enviarDadosSerial(){
         valorForca = tratamentoForca(valorTensao);
 
         Serial.print("Forca lida: ");
-        Serial.print(valorForca, 2);
+        Serial.print(valorForca);
 
         Serial.print(" kg/f | Tensao ADC: ");
-        Serial.print(valorTensao, 2);
+        Serial.print(valorTensao);
 
         Serial.println(" V");
     }

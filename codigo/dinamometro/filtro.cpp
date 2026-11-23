@@ -46,11 +46,11 @@ double BiQuad_signalSample(BiQuadC *bq, double x) {
     return y;
 }
 
-double filtrar(float volts){
+double filtrar(float contagens){
     // 5.0 Variáveis locais
     double y; //y2 para mais uma seção.
 
-    y = BiQuad_signalSample(prtbq1, volts);
+    y = BiQuad_signalSample(prtbq1, contagens);
     //y2 = BiQuad_signalSample(prtbq2, y);
     // y3 = BiQuad_signalSample(prtbq3, y2);
     return y;
