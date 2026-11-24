@@ -3,9 +3,10 @@
 
 void inicializarSerial();
 
-void enviarDadosFila(double saidaADC);
+// Chamada dentro da ISR: avisa o loop() quando é hora de imprimir.
+void sinalizarSaida();
 
+// Chamada no loop(): imprime se houver sinalização pendente.
 void enviarDadosSerial();
-
 
 #endif

@@ -1,58 +1,64 @@
 #include "filtro.h"
-
 #include <Arduino.h>
 
+// Filtro em 2 estágios (tudo em inteiros, sem erro acumulado):
+//
+// Estágio 1: média de blocos de 50 amostras (50 ms a 1 kHz) -> decimação p/ 20 Hz
+//            zeros em 20, 40, 60... Hz  => elimina 60 Hz e os aliases em 20 Hz
+// Estágio 2: média móvel de 40 blocos (2 s) a 20 Hz
+//            zeros em 0,5 Hz e múltiplos => elimina 1, 2 e 2,5 Hz
+//
+// Resposta equivalente a uma média de 2 s (2000 amostras) usando só 40 posições.
+#define BLOCO   50
+#define JANELA  40
 
-static_assert(sizeof(double) == 4, "Este sketch requer AVR (double de 4 bytes).");
+static uint16_t acumBloco = 0;      // máx. 50*1023 = 51.150 (cabe em 16 bits)
+static uint8_t  contBloco = 0;
+static uint16_t buffer[JANELA];     // 80 bytes
+static uint8_t  indice = 0;
+static volatile uint8_t  preenchidos = 0;  // blocos válidos (evita rampa no início)
+static volatile uint32_t soma = 0;         // máx. 40*51.150 = 2.046.000
 
-// --- 1. Estrutura do Filtro BiQuad ---
-typedef struct {
-    double B[3];       // Coeficientes do numerador (b0, b1, b2)
-    double A[2];       // Coeficientes do denominador (a1, a2) - (a0 é 1)
-    double wz[2];      // Estados internos (atrasos) wz[0]=w[n-1], wz[1]=w[n-2]
-    double scaleValue; // Ganho (Scale Value) desta seção
-} BiQuadC;
-
-
-BiQuadC bq1; //bq2
-BiQuadC *prtbq1 = &bq1;
-//BiQuadC *prtbq2 = &bq2;
-
-// --- 2. Função de Inicialização do Filtro ---
-void BiQuad_initWithCoefficients(BiQuadC *bq, double b0, double b1, double b2,
-                                    double a1, double a2, double scaleValue) {
-    bq->B[0] = b0; bq->B[1] = b1; bq->B[2] = b2;
-    bq->A[0] = a1; bq->A[1] = a2;
-    bq->wz[0] = 0;
-    bq->wz[1] = 0;
-    bq->scaleValue = scaleValue;
-                                }
-//Função de Inicialização do setup(declarar no .h)
-void inicializarFiltro(){
-    // 6.3. Coeficientes do Filtro (Gerados pelo MATLAB) Ex. abaixo: Passa baixa, Butterworth, Fs = 1000 Hz, frequencia de corte = 4 Hz e frequencia de rejeição = 40 Hz (-40dB)
-    BiQuad_initWithCoefficients(prtbq1, 1.00000000e+00, 2.00000000e+00, 1.00000000e+00, -1.96427336e+00,9.64900457e-01, 1.567731501764e-04 );
-
-    //===== verifiar se nao vai dar BO com uma freq 2hz
+void inicializarFiltro() {
+    acumBloco = 0;
+    contBloco = 0;
+    indice = 0;
+    preenchidos = 0;
+    soma = 0;
+    for (uint8_t i = 0; i < JANELA; i++) {
+        buffer[i] = 0;
+    }
 }
 
-// --- 3. Função de Processamento de Amostra ---
-//sai do arquivo então declarar no .h
-double BiQuad_signalSample(BiQuadC *bq, double x) {
-    double y;
-    y = bq->B[0] * x + bq->wz[0];
-    bq->wz[0] = bq->B[1] * x - bq->A[0] * y + bq->wz[1];
-    bq->wz[1] = bq->B[2] * x - bq->A[1] * y;
-    y *= bq->scaleValue;
-    return y;
+// Roda na ISR a 1 kHz: na maioria das vezes é só uma soma de 16 bits
+void filtrar(uint16_t contagens) {
+    acumBloco += contagens;
+
+    if (++contBloco < BLOCO) return;
+
+    // Fim do bloco (a cada 50 ms): atualiza a média móvel
+    soma -= buffer[indice];
+    buffer[indice] = acumBloco;
+    soma += acumBloco;
+
+    acumBloco = 0;
+    contBloco = 0;
+
+    if (++indice >= JANELA) indice = 0;
+    if (preenchidos < JANELA) preenchidos++;
 }
 
-double filtrar(float contagens){
-    // 5.0 Variáveis locais
-    double y; //y2 para mais uma seção.
+// Roda no loop(): devolve a média em contagens do ADC
+float lerMediaFiltrada() {
+    uint32_t s;
+    uint8_t n;
 
-    y = BiQuad_signalSample(prtbq1, contagens);
-    //y2 = BiQuad_signalSample(prtbq2, y);
-    // y3 = BiQuad_signalSample(prtbq3, y2);
-    return y;
+    noInterrupts();
+    s = soma;
+    n = preenchidos;
+    interrupts();
+
+    if (n == 0) return 0.0;     // ainda sem nenhum bloco completo
+
+    return (float)s / ((float)BLOCO * n);
 }
-
